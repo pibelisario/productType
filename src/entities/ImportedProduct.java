@@ -11,7 +11,6 @@ public class ImportedProduct extends Product{
 	public ImportedProduct(String name, Double price, Double customsFee) {
 		super(name, price);
 		this.customsFee = customsFee;
-		totalPrice();
 	}
 
 
@@ -25,7 +24,7 @@ public class ImportedProduct extends Product{
 	}
 	
 	public Double totalPrice() {
-		return super.getPrice() + customsFee;
+		return super.getPrice();
 	}
 	
 	@Override

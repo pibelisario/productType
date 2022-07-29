@@ -41,7 +41,8 @@ public class Program {
 			} else if (resp == 'i') {
 				System.out.print("Customs fee: ");
 				double customsFee = in.nextDouble();
-				Product imported = new ImportedProduct(name, price, customsFee);
+				double newPrice = price + customsFee;
+				Product imported = new ImportedProduct(name, newPrice, customsFee);
 				
 				list.add(imported);
 			} else {
