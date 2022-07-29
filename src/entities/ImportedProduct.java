@@ -32,7 +32,7 @@ public class ImportedProduct extends Product{
 	public String priceTag() {		
 		StringBuilder sb = new StringBuilder();	
 		sb.append(super.getName() + " $ ");
-		sb.append(totalPrice());
+		sb.append(String.format("%.2f",totalPrice()));
 		sb.append(" (Customs fee: $ " +String.format("%.2f", customsFee) +")");
 		
 		return sb.toString();
